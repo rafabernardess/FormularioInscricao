@@ -2,7 +2,7 @@
 /* Estiliza o corpo da página */
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url(public/img/fundo.png);
+  background-image: url(/img/fundo.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
