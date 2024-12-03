@@ -39,7 +39,7 @@ function FormularioInscricao() {
     return (
         <div className="form-container">
             <div className="header">
-                <img src="public/img/logo.png" alt="Logo" className="logo" />
+                <img src="/img/logo.png" alt="Logo" className="logo" />
                 <h1>Formulário de Inscrição</h1>
             </div>
             <form onSubmit={handleSubmit}>
