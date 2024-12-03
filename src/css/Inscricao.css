@@ -1,0 +1,239 @@
+/* Estiliza o corpo da página */
+/* Estiliza o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(public/img/fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita rolagem na página */
+  }
+  
+  /* Estiliza o contêiner principal do formulário */
+  .form-container {
+    width: 60vw; /* Torna o contêiner relativo para que os elementos dentro possam ser posicionados com relação a ele */
+    overflow: hidden; /* Garante que nada saia do contêiner */
+  }
+  
+  /* Estiliza a mensagem de erro */
+  .error-message {
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 1.2rem;
+    position: absolute; /* Mantém a mensagem fixa sem interferir no layout */
+    top: -2vw; /* Ajuste a posição para ficar acima do botão */
+    left: 0;
+    width: 100%; /* Garante que ocupe toda a largura do contêiner */
+    text-align: center;
+    font-weight: bold;
+    z-index: 10; /* Garante que a mensagem fique por cima de outros elementos */
+  }
+  
+  /* Exibe a mensagem de erro quando houver necessidade */
+  .form-container.error-active .error-message {
+    display: block; /* Exibe a mensagem de erro */
+  }
+  
+  
+  /* Estiliza o cabeçalho do formulário */
+  .header {
+    display: flex; /* Utiliza flexbox para alinhar os itens do cabeçalho */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+  
+  /* Estiliza a logo */
+  /* Estiliza a logo */
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 75px;
+    height: auto;
+  }
+  
+  /* Estiliza o título do formulário */
+  h1 {
+    font-size: 2.5vw; /* Define o tamanho da fonte como 2.2% da largura da visualização */
+    color: #fff; /* Define a cor do texto como branco */
+    margin-bottom: 5vw; /* Define a margem inferior do título */
+    text-align: center; /* Centraliza o texto do título */
+  }
+  
+  /* Estiliza os grupos de entrada do formulário */
+  .input-group {
+    display: flex; /* Utiliza flexbox para alinhar os itens */
+    flex-direction: column; /* Alinha os itens em coluna */
+    margin-bottom: 1.5vw; /* Define a margem inferior para espaçamento */
+  }
+  
+  /* Estiliza os rótulos dos campos */
+  label {
+    font-size: 1.4vw; /* Define o tamanho da fonte do rótulo */
+    margin-bottom: 2vw; /* Define a margem inferior do rótulo */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #ffffff; /* Define a cor do texto do rótulo */
+  }
+  
+  /* Estiliza os campos de entrada */
+  input {
+    padding: 1.2vw 1.5vw; /* Define o preenchimento interno do campo */
+    border-radius: 5vw; /* Define bordas arredondadas */
+    border: none; /* Remove a borda padrão */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    background-color: #ffffffa1; /* Define a cor de fundo do campo */
+    color: #131212; /* Define a cor do texto do campo */
+    font-size: 1.4vw; /* Define o tamanho da fonte do texto do campo */
+    box-sizing: border-box;
+  }
+  
+  /* Estiliza o texto de placeholder dos campos */
+  input::placeholder {
+    color: #242323; /* Define a cor do texto de placeholder como cinza */
+  }
+  
+  /* Estiliza o botão de envio do formulário */
+  .submit-btn {
+    background-color: #ff6f3c; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    padding: 0.8vw; /* Reduz o preenchimento interno do botão */
+    width: 40%; /* Reduz a largura do botão para 40% */
+    border: none; /* Remove a borda */
+    border-radius: 5vw; /* Borda arredondada */
+    font-size: 1.5vw; /* Diminui o tamanho da fonte */
+    margin-top: 4vw; /* Margem superior */
+    cursor: pointer; /* Cursor indicando que o botão é clicável */
+    /* Para mover para a direita ou esquerda */
+    position: relative; /* Necessário para usar left ou right */
+    left: 30%; /* Move o botão 10% para a direita (ajuste conforme necessário) */
+  }
+  
+  
+  /* Estiliza o botão ao passar o mouse sobre ele */
+  .submit-btn:hover {
+    background-color: #ff5722; /* Altera a cor de fundo ao passar o mouse */
+  }
+  
+  /* Estiliza o botão ao ser clicado */
+  .submit-btn:active {
+    background-color: #ff5e00; /* Altera a cor de fundo quando o botão é clicado */
+  }
+  
+  /* Estiliza o pseudo-elemento antes do rótulo nos grupos de entrada */
+  .input-group label::before {
+    content: ''; /* Define que o conteúdo inicial é vazio */
+    display: inline-flex; /* Exibe como flexível em linha */
+    justify-content: center; /* Centraliza o conteúdo dentro do círculo */
+    align-items: center; /* Centraliza verticalmente */
+    width: 2.5vw; /* Define a largura do círculo */
+    height: 2.5vw; /* Define a altura do círculo */
+    background-color: #ff6f3c; /* Define a cor de fundo do círculo */
+    border-radius: 50%; /* Arredonda as bordas para criar um círculo */
+    color: rgb(255, 255, 255); /* Define a cor do texto dentro do círculo como branco */
+    margin-right: 0.9vw; /* Define a margem à direita do círculo */
+    font-weight: bold; /* Define o peso da fonte dentro do círculo como negrito */
+  }
+  
+  /* Estiliza os números dos grupos de entrada */
+  .input-group.grupo-1 label::before { content: '1'; } /* Nome Completo */
+  .input-group.grupo-2 label::before { content: '2'; } /* Data de Nascimento */
+  .input-group.grupo-3 label::before { content: '3'; } /* Endereço de E-mail */
+  .input-group.grupo-4 label::before { content: '4'; } /* Número de Telefone */
+  .input-group.grupo-5 label::before { content: '5'; } /* CEP */
+  
+  /* Estiliza o contêiner principal do formulário */
+  .form-container {
+    width: 60vw;
+   
+    
+  }
+  
+  /* Estiliza áreas de texto (não utilizado neste exemplo, mas pode ser útil para expansão futura) */
+  
+  /* Estiliza os campos de entrada do tipo textarea */
+  .input-field {
+    width: 58%; /* Define a largura do campo de entrada como 58% do contêiner pai */
+    border-radius: 1vw; /* Define bordas arredondadas */
+    border: 1px solid #ccc; /* Define a borda como uma linha sólida cinza */
+    padding: 1vw; /* Define o preenchimento interno do campo */
+    background-color: #f4f7fa; /* Define a cor de fundo do campo */
+    font-size: 1.4vw; /* Define o tamanho da fonte do texto do campo */
+    resize: none; /* Remove a capacidade de redimensionar a área de texto */
+  }
+  
+  /* Estiliza o contêiner para as linhas de entrada */
+  .rows {
+    margin-bottom: 7vw; /* Define a margem inferior para espaçamento */
+    justify-content: space-between; /* Distribui os itens igualmente ao longo da linha */
+    height: 5vh; /* Define a altura do contêiner como 5% da altura da visualização */
+    width: 100%; /* Define a largura do contêiner como 100% do contêiner pai */
+    display: flex; /* Utiliza flexbox para alinhar os itens */
+    flex-direction: row; /* Alinha os itens em linha */
+  }
+  
+  .error-message {
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 1.2rem;
+    top: 55px; /* Ajuste conforme necessário */
+    text-align: center;
+    position: relative; /* Mantém o layout */
+    font-weight: bold; /* Aplica o negrito */
+  }
+  
+  @media (max-width: 900px) {
+    body {
+      padding-top: 2vh;
+    }
+  
+    .form-container {
+      width: 85;
+      padding: 2vw;
+    }
+  
+    h1 {
+      font-size: 3vw;
+      margin-bottom: 5vw;
+    }
+  
+    label {
+      font-size: 1.5vw;
+    }
+  
+    input {
+      font-size: 2.5vw;
+      padding: 1.5vw 1.5vw;
+    }
+  
+    .submit-btn {
+      width: 75%;
+      font-size: 4vw;
+      margin-top: 7vw;
+      left: 12%;
+    }
+  
+    .logo {
+      width: 10vw;
+    }
+    .rows {
+      margin-bottom: 20vw; /* Define a margem inferior para espaçamento */
+      justify-content: space-between; /* Distribui os itens igualmente ao longo da linha */
+      height: 5vh; /* Define a altura do contêiner como 5% da altura da visualização */
+      width: 100%; /* Define a largura do contêiner como 100% do contêiner pai */
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .allRows {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .error-message {
+      font-size: 1.4rem;
+      top: 3vw;
+    }
+  }
