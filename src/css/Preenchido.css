@@ -43,7 +43,7 @@ body {
 }
 
 .icon img {
-    width: 250px; /* Tamanho padrão para telas de PC */
+    width: 300px; /* Tamanho padrão para telas de PC */
     height: auto;
     max-width: 100%;
 }
