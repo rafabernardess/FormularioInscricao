@@ -34,9 +34,11 @@ body {
 .icon {
     position: relative;
     margin-bottom: 20px;
-    top: -45.5px;
-    left: -365px;
+    top: -45.5px; 
+    left: 0; /* Ajustado para não ficar fora da tela */
     transform: translate(0, 0);
+    display: flex; /* Garante que o ícone seja exibido */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
 }
 
 .icon img {
@@ -82,6 +84,9 @@ body {
         width: 90%; /* Deixe a caixa flexível */
         margin: 0 auto;
     }
+    .icon img {
+        width: 180px; /* Ajuste para o ícone em telas médias */
+    }
 }
 
 /* Dispositivos menores (até 768px) */
@@ -94,8 +99,13 @@ body {
         margin: 0 auto;
         margin-top: 2em; /* Ajusta a margem superior */
     }
+    .icon {
+        top: 0; /* Remove a posição negativa para evitar sair da tela */
+        margin-top: 1em;
+        justify-content: center; /* Garante que o ícone fique centralizado */
+    }
     .icon img {
-        width: 80px; /* Reduz o tamanho da imagem do ícone */
+        width: 120px; /* Reduz o tamanho da imagem do ícone */
         margin-left: 0;
         margin-top: 0;
     }
@@ -114,10 +124,14 @@ body {
         margin: 0 auto;
         margin-top: 1.5em; /* Ajuste na margem superior */
     }
-    .icon img {
-        width: 70px; /* Reduz ainda mais o ícone */
-        margin-left: auto; /* Centraliza horizontalmente */
+    .icon {
+        top: 0;
         margin-top: 1em;
+        justify-content: center; /* Centraliza o ícone no mobile */
+    }
+    .icon img {
+        width: 80px; /* Reduz o ícone ainda mais para se ajustar à tela pequena */
+        margin-left: 0; /* Remove margens extras */
     }
     .fonte h1 {
         font-size: 1.5rem; /* Ajusta o tamanho da fonte */
@@ -126,7 +140,7 @@ body {
     }
     .fonte h2 {
         font-size: 1.3rem;
-        margin-left: auto;
+        margin-left: 0;
         text-align: center;
         left: 0;
         top: 0;
