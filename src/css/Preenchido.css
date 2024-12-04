@@ -46,7 +46,7 @@ body {
     width: 230px; /* Tamanho padrão para telas de PC */
     height: auto;
     max-width: 100%;
-    left: 50px;
+    margin-right: 20px; /* Espaçamento entre o ícone e a frase */
 }
 
 /* Centraliza o texto e organiza o h1 */
