@@ -7,7 +7,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    max-height: none; /* Remover o max-height fixo */
     background-image: url(/img/fundo.png); 
     background-size: cover; 
     color: white;
@@ -34,17 +33,19 @@ body {
 .icon {
     position: relative;
     margin-bottom: 20px;
-    top: -45.5px; 
-    left: 0; /* Ajustado para não ficar fora da tela */
+    top: 0; /* Removi o valor negativo */
+    left: 0;
     transform: translate(0, 0);
-    display: flex; /* Garante que o ícone seja exibido */
-    justify-content: center; /* Centraliza o ícone horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Ocupa toda a largura disponível */
 }
 
 .icon img {
-    width: 230px;
-    max-width: 100%;
+    width: 230px; /* Tamanho padrão para telas maiores */
     height: auto;
+    max-width: 100%;
 }
 
 /* Centraliza o texto e organiza o h1 */
@@ -81,7 +82,7 @@ body {
 @media (max-width: 1024px) {
     .CaixaMensagem {
         margin-top: -40em;
-        width: 90%; /* Deixe a caixa flexível */
+        width: 90%; 
         margin: 0 auto;
     }
     .icon img {
@@ -95,23 +96,21 @@ body {
         height: auto; /* Deixe a altura ajustar-se ao conteúdo */
     }
     .CaixaMensagem {
-        width: 90%; /* A caixa ocupa 90% da largura da tela */
+        width: 90%; 
         margin: 0 auto;
-        margin-top: 2em; /* Ajusta a margem superior */
+        margin-top: 2em;
     }
     .icon {
-        top: 0; /* Remove a posição negativa para evitar sair da tela */
+        top: 0;
         margin-top: 1em;
-        justify-content: center; /* Garante que o ícone fique centralizado */
+        justify-content: center;
     }
     .icon img {
-        width: 120px; /* Reduz o tamanho da imagem do ícone */
-        margin-left: 0;
-        margin-top: 0;
+        width: 120px; /* Tamanho menor para dispositivos menores */
     }
     .fonte h1, .fonte h2 {
-        font-size: 1.8rem; /* Tamanho da fonte ajustado */
-        text-align: center; /* Centraliza o texto */
+        font-size: 1.8rem;
+        text-align: center;
         left: 0;
         top: auto;
     }
@@ -120,27 +119,25 @@ body {
 /* Dispositivos pequenos (até 580px) */
 @media (max-width: 580px) {
     .CaixaMensagem {
-        width: 100%; /* A caixa ocupa toda a largura da tela */
+        width: 100%; 
         margin: 0 auto;
-        margin-top: 1.5em; /* Ajuste na margem superior */
+        margin-top: 1.5em;
     }
     .icon {
         top: 0;
         margin-top: 1em;
-        justify-content: center; /* Centraliza o ícone no mobile */
+        justify-content: center;
     }
     .icon img {
-        width: 80px; /* Reduz o ícone ainda mais para se ajustar à tela pequena */
-        margin-left: 0; /* Remove margens extras */
+        width: 100px; /* Menor tamanho para telas pequenas */
     }
     .fonte h1 {
-        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+        font-size: 1.5rem;
         margin-top: 0.5em;
-        text-align: center; /* Centraliza o texto */
+        text-align: center;
     }
     .fonte h2 {
         font-size: 1.3rem;
-        margin-left: 0;
         text-align: center;
         left: 0;
         top: 0;
