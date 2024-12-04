@@ -20,8 +20,10 @@ body {
 }
 
 .logo {
+    position: absolute; /* Tornar a logo fixa no topo da página */
     top: 25px;
     left: 20px;
+    z-index: 100; /* Garante que a logo apareça acima de outros elementos */
 }
 
 .logo-img {
@@ -31,13 +33,12 @@ body {
 
 /* Estilo para o ícone */
 .icon {
-    position: relative;
-    margin-bottom: 20px;
+    position: absolute; /* Torna o ícone independente do fluxo normal da página */
+    top: 10%; /* Ajusta a posição do ícone para cima da frase */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 20px; /* Adicione uma margem superior para mover o ícone mais para cima */
 }
 
 .icon img {
@@ -50,12 +51,13 @@ body {
 .content {
     position: relative;
     text-align: center;
+    margin-top: 200px; /* Ajuste para garantir que o texto fique abaixo do ícone */
 }
 
 .fonte h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3.5rem;
-    margin-top: 50px; /* Ajuste de margem para posicionar o texto corretamente abaixo do ícone */
+    margin-top: 50px; /* Ajuste de margem para o texto */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -77,6 +79,9 @@ body {
         width: 90%; 
         margin: 0 auto;
     }
+    .logo-img {
+        width: 60px; /* Reduz o tamanho da logo em dispositivos menores */
+    }
     .icon img {
         width: 180px;
     }
@@ -95,9 +100,11 @@ body {
         margin: 0 auto;
         margin-top: 2em;
     }
+    .logo-img {
+        width: 50px;
+    }
     .icon {
-        margin-top: 1em;
-        justify-content: center;
+        top: 8%; /* Ajuste a posição do ícone para telas menores */
     }
     .icon img {
         width: 120px;
@@ -118,9 +125,11 @@ body {
         margin: 0 auto;
         margin-top: 1.5em;
     }
+    .logo-img {
+        width: 40px;
+    }
     .icon {
-        margin-top: 1em;
-        justify-content: center;
+        top: 5%; /* Ajuste a posição do ícone para cima em telas menores */
     }
     .icon img {
         width: 100px;
@@ -133,4 +142,3 @@ body {
         font-size: 1.3rem;
     }
 }
-
