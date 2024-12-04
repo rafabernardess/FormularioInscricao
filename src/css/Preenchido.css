@@ -33,17 +33,17 @@ body {
 .icon {
     position: relative;
     margin-bottom: 20px;
-    top: 0; /* Removi o valor negativo */
+    top: 0;
     left: 0;
     transform: translate(0, 0);
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza verticalmente */
-    width: 100%; /* Ocupa toda a largura disponível */
+    align-items: center;
+    width: 100%;
 }
 
 .icon img {
-    width: 230px; /* Tamanho padrão para telas maiores */
+    width: 230px; /* Tamanho padrão para telas de PC */
     height: auto;
     max-width: 100%;
 }
@@ -76,17 +76,20 @@ body {
     max-width: 400px;
 }
 
-/* Estilos responsivos usando media queries */
+/* --- Estilos responsivos --- */
 
 /* Dispositivos médios (até 1024px) */
 @media (max-width: 1024px) {
     .CaixaMensagem {
-        margin-top: -40em;
+        margin-left: 0; /* Remover o grande espaçamento lateral para centralizar */
         width: 90%; 
         margin: 0 auto;
     }
     .icon img {
         width: 180px; /* Ajuste para o ícone em telas médias */
+    }
+    .fonte h1, .fonte h2 {
+        font-size: 2.5rem; /* Reduz o tamanho do texto em telas médias */
     }
 }
 
@@ -101,7 +104,6 @@ body {
         margin-top: 2em;
     }
     .icon {
-        top: 0;
         margin-top: 1em;
         justify-content: center;
     }
@@ -111,7 +113,6 @@ body {
     .fonte h1, .fonte h2 {
         font-size: 1.8rem;
         text-align: center;
-        left: 0;
         top: auto;
     }
 }
@@ -124,7 +125,6 @@ body {
         margin-top: 1.5em;
     }
     .icon {
-        top: 0;
         margin-top: 1em;
         justify-content: center;
     }
@@ -139,7 +139,6 @@ body {
     .fonte h2 {
         font-size: 1.3rem;
         text-align: center;
-        left: 0;
         top: 0;
     }
 }
