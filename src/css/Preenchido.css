@@ -43,9 +43,10 @@ body {
 }
 
 .icon img {
-    width: 300px; /* Tamanho padrão para telas de PC */
+    width: 230px; /* Tamanho padrão para telas de PC */
     height: auto;
     max-width: 100%;
+    left: 50px;
 }
 
 /* Centraliza o texto e organiza o h1 */
